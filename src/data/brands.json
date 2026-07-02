@@ -1,0 +1,38 @@
+[
+  {
+    "id": "brand_01",
+    "name": "Nvidia",
+    "logo": "NVIDIA",
+    "type": "AI Curricula Partner",
+    "description": "Collaborated with Nvidia Deep Learning Institute to deliver a free 3-part YouTube video masterclass on deploying edge-node generative AI models, which garnered over 1.2M views.",
+    "featuredWork": "AI Developer Bootcamp",
+    "accentColor": "#76B900"
+  },
+  {
+    "id": "brand_02",
+    "name": "GitHub",
+    "logo": "GITHUB",
+    "type": "Global Education Ambassador",
+    "description": "Appointed as an official ambassador for GitHub Education. Designed interactive repositories and hosted the 'Next-Gen Github Actions Hackathon' with $50k in student prizes.",
+    "featuredWork": "DevOps Mastery Series",
+    "accentColor": "#ffffff"
+  },
+  {
+    "id": "brand_03",
+    "name": "Google Cloud",
+    "logo": "GOOGLE CLOUD",
+    "type": "DevFest Keynote Partner",
+    "description": "Partnered on a multi-city DevFest speaking tour highlighting serverless architectures and distributed web design, reaching 15,000+ developers live.",
+    "featuredWork": "Serverless Scaling Tour",
+    "accentColor": "#4285F4"
+  },
+  {
+    "id": "brand_04",
+    "name": "Apple Developer",
+    "logo": "APPLE DEVELOPER",
+    "type": "Swift Student Challenge Mentor",
+    "description": "Coordinated custom workshop series for students preparing submissions for the Swift Student Challenge, achieving a record-breaking 45 mentored winners globally.",
+    "featuredWork": "iOS Design Workshops",
+    "accentColor": "#FF2D55"
+  }
+]

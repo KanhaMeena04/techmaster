@@ -1,0 +1,35 @@
+[
+  {
+    "id": "event_01",
+    "title": "Visions of AI: Rebuilding Modern Education",
+    "type": "Keynote Speech",
+    "location": "World Auditorium, Silicon Valley",
+    "date": "October 14, 2025",
+    "attendance": "8,500 live, 100K+ stream",
+    "description": "Faisal delivered the keynote opening presentation discussing how AI development environments are democratizing student access, urging schools to shift from rote syntax to design thinking.",
+    "media": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80",
+    "accentColor": "#00ffd1"
+  },
+  {
+    "id": "event_02",
+    "title": "Systems Architecture: Scalability Masterclass",
+    "type": "Live Coding Workshop",
+    "location": "Velasquez Convention Hall, London",
+    "date": "January 22, 2026",
+    "attendance": "1,200 attendees",
+    "description": "A 4-hour live coding demonstration building a global event-driven messaging service from scratch. Faisal detailed load balancers, caching, and low-latency database setups.",
+    "media": "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=1200&q=80",
+    "accentColor": "#00E5FF"
+  },
+  {
+    "id": "event_03",
+    "title": "TEDxTalk: The Power of building in Public",
+    "type": "TEDx Keynote",
+    "location": "Aetheris Theatre, Singapore",
+    "date": "March 05, 2026",
+    "attendance": "3,000 live",
+    "description": "A speech on how public documentation of one's learning journey can attract global career networks, replace outdated resumes, and build organic personal brands.",
+    "media": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&q=80",
+    "accentColor": "#aa3bff"
+  }
+]

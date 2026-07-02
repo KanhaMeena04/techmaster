@@ -1,0 +1,47 @@
+[
+  {
+    "id": "camp_01",
+    "title": "Code 100K: Democratizing Tech",
+    "sponsor": "GitHub & AWS",
+    "reach": "100,000+ Students",
+    "status": "Ongoing",
+    "description": "An initiative to provide 100,000 rural and underprivileged students with free access to high-tier premium software engineering bootcamps, complete with cloud credits and direct mentoring support.",
+    "highlights": [
+      "Zero-cost curriculum with video lectures",
+      "$2M worth of cloud developer credits distributed",
+      "Placement cells connecting learners with remote opportunities"
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80",
+    "accentColor": "#00ffd1"
+  },
+  {
+    "id": "camp_02",
+    "title": "DevBuild Hackathon 2026",
+    "sponsor": "Google Cloud",
+    "reach": "12,000+ Attendees",
+    "status": "Completed",
+    "description": "A 72-hour virtual and physical coding challenge where developers built tools resolving educational accessibility issues. Featuring live streaming evaluations and celebrity judge panels.",
+    "highlights": [
+      "1,800+ project repositories submitted",
+      "$100,000 in cash awards and hardware funding",
+      "Mentored by top tech executives from Silicon Valley"
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
+    "accentColor": "#00E5FF"
+  },
+  {
+    "id": "camp_03",
+    "title": "Build in Public: Open Source Summit",
+    "sponsor": "Vercel",
+    "reach": "45,000+ Engineers",
+    "status": "Completed",
+    "description": "A campaign promoting the 'Build in Public' methodology. Students and developers published their progress daily on GitHub and Twitter, working together on a central modern web ecosystem.",
+    "highlights": [
+      "50+ new open-source utility libraries spawned",
+      "Featured trending topics on developer networks",
+      "Direct Vercel sponsorship for the top 5 projects"
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
+    "accentColor": "#aa3bff"
+  }
+]

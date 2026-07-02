@@ -1,0 +1,45 @@
+{
+  "name": "Tech Master F",
+  "title": "Educator, Speaker & Tech Creator",
+  "tagline": "Building the Bridge Between Code and Ambition",
+  "bio": "For over a decade, Tech Master F has been a driving force in digital education. As a software architect turned YouTuber and international speaker, he has reached over 2.5 million subscribers with deep-dive coding courses, systems engineering breakdowns, and personal branding strategies. From lecturing at elite universities to hosting massive global hackathons, Faisal's mission is to democratize technological literacy for students worldwide.",
+  "philosophy": {
+    "title": "A Cinematic Approach to Education",
+    "paragraph": "Learning shouldn't feel like a chore. Faisal believes that engineering tutorials should be highly engaging, visual, and cinematic experiences. By blending state-of-the-art interactive visuals with rigorous programming principles, we craft courses that leave a permanent imprint on a student's cognitive journey."
+  },
+  "credentials": [
+    {
+      "metric": "YouTube Views",
+      "count": "120 Million+"
+    },
+    {
+      "metric": "Keynote Audiences",
+      "count": "80,000+ Live"
+    },
+    {
+      "metric": "Students Employed",
+      "count": "15,000+"
+    },
+    {
+      "metric": "Global Hackathons Hosted",
+      "count": "30+"
+    }
+  ],
+  "values": [
+    {
+      "icon": "Cpu",
+      "label": "Engineering Rigor",
+      "description": "We teach production-level systems design, testing patterns, and infrastructure optimization."
+    },
+    {
+      "icon": "Youtube",
+      "label": "Cinematic Storytelling",
+      "description": "Making technical insights digestible and captivating through premium multimedia editing."
+    },
+    {
+      "icon": "Sparkles",
+      "label": "Student Success First",
+      "description": "Every syllabus, review checklist, and mentor session is built with placement as the ultimate target."
+    }
+  ]
+}

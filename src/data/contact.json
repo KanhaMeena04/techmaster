@@ -1,0 +1,17 @@
+{
+  "email": "bookings@techmasterf.com",
+  "phone": "+1 (800) 555-CODE",
+  "location": "Metropolis Creator Hub, Floor 42",
+  "socials": [
+    { "name": "YouTube", "url": "https://youtube.com/c/techmasterf", "handle": "@techmasterf" },
+    { "name": "LinkedIn", "url": "https://linkedin.com/in/techmasterf", "handle": "TechMasterF" },
+    { "name": "GitHub", "url": "https://github.com/techmasterf", "handle": "techmasterf" },
+    { "name": "Twitter", "url": "https://twitter.com/techmasterf", "handle": "@techmasterf" }
+  ],
+  "inquiryTypes": [
+    { "value": "speaking", "label": "Keynote Speaking / Panels" },
+    { "value": "sponsorship", "label": "YouTube Brand Collaborations" },
+    { "value": "bootcamp", "label": "University/Corporate Workshops" },
+    { "value": "general", "label": "General Mentorship Inquiry" }
+  ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "date": "September 2015",
+    "event": "First YouTube Upload",
+    "tag": "Milestone",
+    "description": "Uploaded 'Understanding C Pointers & Memory Layout', which laid the foundation for deep-dive technical education on the channel."
+  },
+  {
+    "date": "March 2018",
+    "event": "First 10,000 Students enrolled",
+    "tag": "Growth",
+    "description": "Launched the first free, open-source curriculum repository on GitHub, enabling peer-to-peer code review groups."
+  },
+  {
+    "date": "November 2020",
+    "event": "Awarded Creator Silver Button",
+    "tag": "YouTube",
+    "description": "Passed 100,000 subscribers, signaling strong demand for high-fidelity, code-along video formats."
+  },
+  {
+    "date": "July 2022",
+    "event": "Keynote at Google DevFest",
+    "tag": "Speaking",
+    "description": "Delivered 'The Future of Full-Stack Architecture' to a crowd of 3,500 developers in Berlin, marking his first European keynote."
+  },
+  {
+    "date": "May 2024",
+    "event": "Launch of MasterClass Platform",
+    "tag": "Education",
+    "description": "Released a custom, gamified interactive learning platform featuring live servers and real-time execution environments."
+  },
+  {
+    "date": "January 2026",
+    "event": "Creator Gold Button & 2.5M Subscribers",
+    "tag": "Milestone",
+    "description": "Reached 2.5 million subscribers on YouTube, with over 120 million total views spanning 180 countries."
+  }
+]

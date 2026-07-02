@@ -1,0 +1,41 @@
+[
+  {
+    "id": "job_01",
+    "role": "Senior Cinematic Video Editor",
+    "team": "Production",
+    "location": "Remote / Hybrid (Metropolis)",
+    "salary": "$85,000 - $110,000",
+    "description": "We are seeking a storyteller who can turn dense technical topics into cinematic experiences. You will lead editing on our YouTube channel, course trailers, and documentary releases.",
+    "requirements": [
+      "5+ years editing technical or luxury-tier content",
+      "Expert knowledge of After Effects, Premiere Pro, or DaVinci Resolve",
+      "Deep understanding of developer aesthetics and modern kinetic typography"
+    ]
+  },
+  {
+    "id": "job_02",
+    "role": "Curriculum & Syllabus Developer",
+    "team": "Education",
+    "location": "Remote",
+    "salary": "$90,000 - $120,000",
+    "description": "Design hands-on programming bootcamps and systems design catalogs. You'll draft curriculum blueprints, verify coding exercises, and create automated testing setups.",
+    "requirements": [
+      "Strong background in Full Stack JS, TypeScript, and Go/Rust",
+      "Prior experience drafting engineering course materials or lecturing",
+      "Passionate about making complex systems simple and digestible"
+    ]
+  },
+  {
+    "id": "job_03",
+    "role": "Community Lead & Hackathon Coordinator",
+    "team": "Growth",
+    "location": "Metropolis Space",
+    "salary": "$60,000 - $80,000",
+    "description": "Moderate our 100k+ Discord community, coordinate student mentorship panels, and lead logistics for virtual/physical hackathons.",
+    "requirements": [
+      "Prior experience managing Discord/Slack developer communities",
+      "Excellent communication and event-planning skills",
+      "Empathetic mindset focused on assisting beginners and career switchers"
+    ]
+  }
+]

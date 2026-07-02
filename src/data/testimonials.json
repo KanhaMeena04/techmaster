@@ -1,0 +1,29 @@
+[
+  {
+    "id": "test_01",
+    "name": "Sarah Jenkins",
+    "role": "Software Engineer, Google",
+    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80",
+    "quote": "Faisal's Systems Architecture courses completely shifted my career. I went from being stuck in frontend design to mastering backend clusters and scaling. The course materials are of incredible quality.",
+    "rating": 5,
+    "course": "Systems Architecture MasterClass"
+  },
+  {
+    "id": "test_02",
+    "name": "David Chen",
+    "role": "Founder, DevNexus Incubator",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
+    "quote": "We booked Tech Master F for our annual hackathon kickoff. His opening keynote on 'Building in Public' electrified 2,000+ programmers and sparked double the project submissions compared to last year.",
+    "rating": 5,
+    "course": "Guest Keynote Address"
+  },
+  {
+    "id": "test_03",
+    "name": "Amanda Vance",
+    "role": "Curriculum Director, Horizon Institute",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
+    "quote": "Integrating Faisal's open-source curricula in our university tech tracks was a game changer. The students built actual, high-fidelity portfolios that got them hired within 3 months of graduating.",
+    "rating": 5,
+    "course": "Collaborative Tech Syllabus"
+  }
+]

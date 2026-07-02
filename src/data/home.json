@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "tag": "ELEVATING THE NEXT GENERATION OF TECH LEADERS",
+    "headline": "Democratizing Tech Education & Personal Branding",
+    "paragraph": "I build courses, host live hackathons, share YouTube coding guides, and deliver keynote talks. Helping millions of students and professionals bridge the gap between classroom theory and industry excellence.",
+    "ctaPrimary": "Start Learning",
+    "ctaSecondary": "Book Speaker Keynote"
+  },
+  "stats": [
+    {
+      "value": "2.5M+",
+      "label": "YouTube Learners"
+    },
+    {
+      "value": "150K+",
+      "label": "Students Mentored"
+    },
+    {
+      "value": "500+",
+      "label": "Live Keynote Talks"
+    },
+    {
+      "value": "45+",
+      "label": "Open Source Packages"
+    }
+  ],
+  "values": [
+    {
+      "title": "Actionable Tech Skills",
+      "description": "No boring slides. Every tutorial, course, and coding workshop is hands-on, building real-world enterprise architectures."
+    },
+    {
+      "title": "Empowering Communities",
+      "description": "Fostering an inclusive, global coding community where learners collaborate on open-source repositories and hackathons."
+    },
+    {
+      "title": "Career Acceleration",
+      "description": "Providing direct guidance, portfolio reviews, and mock interviews to help students land high-paying software roles."
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "srv_01",
+    "title": "Online MasterClasses",
+    "tagline": "Full Stack & System Architecture",
+    "description": "Structured, deep-dive curriculum paths covering modern web architecture, cloud deployment, and system scale. Built for students seeking to jump from basic syntax to senior design structures.",
+    "features": [
+      "Interactive coding playgrounds",
+      "CI/CD and deployment pipelines",
+      "Personal code review boards",
+      "Cryptographic certificate of completion"
+    ],
+    "icon": "Cpu",
+    "accentColor": "#00ffd1"
+  },
+  {
+    "id": "srv_02",
+    "title": "Motivational & Keynote Speaking",
+    "tagline": "Inspiring the Developers of Tomorrow",
+    "description": "Electrifying presentations on stage at tech conferences, university seminars, and corporate summits. Faisal speaks on tech education, build-in-public mindsets, and creator strategies.",
+    "features": [
+      "TEDx-style storytelling",
+      "Inspirational developer paths",
+      "Interactive Q&A sessions",
+      "Tailored campus webinars"
+    ],
+    "icon": "Layers",
+    "accentColor": "#aa3bff"
+  },
+  {
+    "id": "srv_03",
+    "title": "Live Coding & Hackathons",
+    "tagline": "Immersive Community Workshops",
+    "description": "High-fidelity, interactive code-alongs and community challenges. We host cohorts that build real-world products live in 48 hours, bridging the gap between developers and recruiters.",
+    "features": [
+      "Real-time event live streaming",
+      "Open-source repository review",
+      "Direct recruiter matchmaking",
+      "Vercel/AWS sponsored server setups"
+    ],
+    "icon": "Box",
+    "accentColor": "#00E5FF"
+  },
+  {
+    "id": "srv_04",
+    "title": "Brand Collaborations",
+    "tagline": "Partnering with Tech Industry Leaders",
+    "description": "Connecting elite tech tools and products with a community of over 2.5 million aspiring programmers. We design interactive middleware demos, API videos, and sponsored tutorials.",
+    "features": [
+      "Dedicated YouTube features",
+      "Developer advocate campaigns",
+      "Custom sandbox integrations",
+      "Targeted student outreach"
+    ],
+    "icon": "Sparkles",
+    "accentColor": "#FF007F"
+  }
+]

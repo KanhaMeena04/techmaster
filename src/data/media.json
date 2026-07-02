@@ -1,0 +1,17 @@
+{
+  "showreel": {
+    "title": "Democratizing Code: Speak, Create, Educate",
+    "description": "A 3-minute cinematic summary tracing Faisal's YouTube lectures, live auditorium talks, and the impact of the MasterClass platform on 150k+ students.",
+    "thumbnail": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80"
+  },
+  "downloads": [
+    { "name": "Official Press Photos & Bios", "size": "45.2 MB", "format": "ZIP Hi-Res JPG / PDF", "type": "download" },
+    { "name": "Keynote Speaking Deck 2026", "size": "18.5 MB", "format": "PDF Presentation", "type": "download" },
+    { "name": "Tech Master F Brand Guidelines", "size": "12.1 MB", "format": "ZIP Vector / Styles", "type": "download" }
+  ],
+  "editorialMentions": [
+    { "source": "TECHCRUNCH", "title": "How YouTuber Faisal is transforming systems engineering education", "date": "May 2026" },
+    { "source": "FORBES 30 UNDER 30", "title": "Faisal nominated in tech education for scaling MasterClass suite", "date": "March 2026" },
+    { "source": "WIRED", "title": "The rise of cinematic tutorials: Inside Faisal's coding studio", "date": "November 2025" }
+  ]
+}

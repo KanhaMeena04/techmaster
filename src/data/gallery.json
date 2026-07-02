@@ -1,0 +1,42 @@
+[
+  {
+    "id": "gallery_01",
+    "title": "Main Studio Setup",
+    "type": "Behind the Scenes",
+    "imageUrl": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80",
+    "aspectRatio": "portrait",
+    "description": "Faisal's workspace featuring dynamic sound dampening, a Shure SM7B mic, and custom monitor arms."
+  },
+  {
+    "id": "gallery_02",
+    "title": "Silicon Valley Keynote",
+    "type": "Live Presentation",
+    "imageUrl": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80",
+    "aspectRatio": "square",
+    "description": "Speaking on stage about modern software design in front of 8,500 developers."
+  },
+  {
+    "id": "gallery_03",
+    "title": "Student Hackathon Showcase",
+    "type": "Community Drive",
+    "imageUrl": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
+    "aspectRatio": "landscape",
+    "description": "Mentoring student teams as they compile code for their projects at DevBuild Hackathon."
+  },
+  {
+    "id": "gallery_04",
+    "title": "Interactive Coding Portal",
+    "type": "UI/UX Design",
+    "imageUrl": "https://images.unsplash.com/photo-1600697395593-e9dc66797b43?auto=format&fit=crop&w=800&q=80",
+    "aspectRatio": "portrait",
+    "description": "Designing premium visuals for the browser-based server playground."
+  },
+  {
+    "id": "gallery_05",
+    "title": "Recording the Podcast",
+    "type": "Media Capture",
+    "imageUrl": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80",
+    "aspectRatio": "landscape",
+    "description": "Faisal in conversation with tech leaders on the Tech Master Podcast."
+  }
+]

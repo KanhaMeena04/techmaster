@@ -1,0 +1,22 @@
+[
+  {
+    "id": "faq_01",
+    "question": "How do I enroll in the Live Mentorship Bootcamps?",
+    "answer": "Enrolling is done directly through our main MasterClass platform. We host cohorts twice a year (Spring and Fall). Applications open one month prior and involve a brief technical assessment to gauge baseline understanding of full-stack principles."
+  },
+  {
+    "id": "faq_02",
+    "question": "What is Faisal's speaking availability for international keynotes?",
+    "answer": "Faisal schedules international speaking engagements 3-6 months in advance. Booking options cover university guest lectures, corporate tech seminars, and major tech conferences. For scheduling, fill out the booking form on the Contact page."
+  },
+  {
+    "id": "faq_03",
+    "question": "Do the online courses offer certificates or code reviews?",
+    "answer": "Yes. All courses hosted on the MasterClass platform include a verified cryptographic completion certificate. Students enrolled in the premium tier also receive weekly personalized video code reviews from our network of senior engineering mentors."
+  },
+  {
+    "id": "faq_04",
+    "question": "How can brands collaborate on the YouTube channel?",
+    "answer": "We only partner with tools and services that Faisal uses in his day-to-day coding workflows. Brand sponsorships range from dedicated video sponsorships, middleware demos, and long-term education campaign collaborations. Fill out the sponsorship request in our contact portal."
+  }
+]

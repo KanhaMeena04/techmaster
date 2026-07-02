@@ -1,0 +1,32 @@
+[
+  {
+    "year": "2015",
+    "title": "The Bedroom Studio",
+    "subtitle": "Launching a coding channel with a $50 microphone",
+    "description": "Faisal recorded his first Python and CSS tutorials while finishing his software engineering degree. The goal was simple: explain topics the way he wished they had been explained to him."
+  },
+  {
+    "year": "2018",
+    "title": "The 100,000 Milestone",
+    "subtitle": "Building a core community of student builders",
+    "description": "After graduating and working as a senior engineer at a top tech company, Faisal focused his channel on system architecture and React. The community grew rapidly as the practical, project-based content resonated."
+  },
+  {
+    "year": "2021",
+    "title": "Going Full-Time Creative",
+    "subtitle": "Resigning from corporate tech to educate the world",
+    "description": "Faisal left his software architecture position to build Tech Master F full-time. He launched the MasterClass suite, which quickly grew to host over 50,000 student enrollments."
+  },
+  {
+    "year": "2023",
+    "title": "Global Stage Speaking Tour",
+    "subtitle": "Inspiring audiences from Dubai to Silicon Valley",
+    "description": "Invited as a guest keynote speaker at TEDx, Google DevFest, and international universities to talk about the future of tech education, AI developer tools, and building a developer brand."
+  },
+  {
+    "year": "2025",
+    "title": "2 Million Strong & Beyond",
+    "subtitle": "Scaling educational ecosystems and open-source contributions",
+    "description": "Reaching over 2.5 million subscribers on YouTube, launching an interactive coding web app, and partnering with tech giants like Nvidia and GitHub to offer free educational courses to underrepresented students."
+  }
+]

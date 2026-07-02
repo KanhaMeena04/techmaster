@@ -1,0 +1,32 @@
+[
+  {
+    "id": "blog_01",
+    "title": "Demystifying System Design: How to Think in Scale",
+    "excerpt": "A deep dive into load balancing, replication lags, and partition strategies. Learn how to map out enterprise-level systems in technical interviews.",
+    "content": "One of the biggest hurdles junior developers face is transitioning from writing clean code blocks to structuring large, distributed services. When we say a system scales, we aren't just talking about speed. We are talking about fault tolerance, partition endurance, and horizontal database clusters. In this guide, Faisal shares a systematic 5-step blueprint to evaluate scalability...",
+    "date": "June 12, 2026",
+    "readTime": "8 min read",
+    "coverImage": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80",
+    "tags": ["System Design", "Backend", "Scale"]
+  },
+  {
+    "id": "blog_02",
+    "title": "Mastering public Speaking as a Shy Engineer",
+    "excerpt": "From stuttering in code reviews to delivering keynotes at TEDx. Practical steps to build confidence, organize slides, and engage tech audiences.",
+    "content": "Most programmers prefer talking to compilers rather than crowds. However, technical leadership requires clear communication. The ability to present complex architectures to stakeholders, investors, or large developer communities can accelerate your career tenfold. Here, Faisal outlines his breathing techniques, slide formatting rules, and strategies to control stage presence...",
+    "date": "May 20, 2026",
+    "readTime": "6 min read",
+    "coverImage": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=600&q=80",
+    "tags": ["Public Speaking", "Soft Skills", "Career"]
+  },
+  {
+    "id": "blog_03",
+    "title": "How to Build a Proof-of-Work Developer Portfolio",
+    "excerpt": "Generic templates won't get you hired. Discover how to frame your repositories, document your logic, and catch the eye of FAANG tech recruiters.",
+    "content": "A CV containing bullet points of programming languages is no longer enough in the age of AI coding assistants. Tech companies want evidence of problem-solving. This means building original, deployed web platforms, contributing to recognized open-source modules, and explaining your architectural tradeoffs in public channels. We look at three stellar examples of student portfolios that got them hired...",
+    "date": "April 08, 2026",
+    "readTime": "7 min read",
+    "coverImage": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80",
+    "tags": ["Portfolio", "Career Prep", "Open Source"]
+  }
+]

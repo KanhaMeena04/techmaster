@@ -1,0 +1,38 @@
+[
+  {
+    "id": "team_01",
+    "name": "Tech Master (Aiden Thorne)",
+    "role": "Founder & Creative Director",
+    "bio": "Over 12 years of crafting award-winning digital experiences. Aiden blends advanced web technology, architectural principles, and cinematic design to set new standards in digital luxury.",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+    "socials": {
+      "twitter": "#",
+      "linkedin": "#",
+      "github": "#"
+    }
+  },
+  {
+    "id": "team_02",
+    "name": "Sophia Vance",
+    "role": "Lead Three.js Developer",
+    "bio": "Specializes in WebGL, GPU programming, and custom GLSL shader choreography. Sophia makes sure that every 3D interaction runs at a blistering 60 FPS on any screen size.",
+    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80",
+    "socials": {
+      "twitter": "#",
+      "linkedin": "#",
+      "github": "#"
+    }
+  },
+  {
+    "id": "team_03",
+    "name": "Marcus Kane",
+    "role": "Senior Frontend Architect",
+    "bio": "A performance expert focusing on code splitting, asset pipelining, and edge optimizations. Marcus ensures our cinematic experiences load instantly worldwide.",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
+    "socials": {
+      "twitter": "#",
+      "linkedin": "#",
+      "github": "#"
+    }
+  }
+]
