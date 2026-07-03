@@ -79,6 +79,15 @@ body {
 .custom-cursor.hovered::after {
   content: attr(data-text);
   text-transform: uppercase;
+  display: block;
+  width: 68px;
+  max-width: 68px;
+  text-align: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  line-height: 1.3;
+  font-size: 9px;
 }
 
 /* Noise overlay */

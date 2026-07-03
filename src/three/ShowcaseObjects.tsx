@@ -155,76 +155,51 @@ export const GreenFacetedSphere: React.FC<ObjectProps> = ({ mouse }) => {
   );
 };
 
-// Shape 3: Holographic DNA Double Helix — Premium orbital strand structure
-export const DNAHelixObject: React.FC<ObjectProps> = ({ mouse }) => {
-  const groupRef = useRef<THREE.Group>(null);
-
-  const strandCount = 28;
-  const radius = 0.75;
-  const height = 3.2;
-  const twist = Math.PI * 3;
+// Shape 3: Violet Faceted Sphere — same calm animation as GreenFacetedSphere, violet palette
+export const VioletPlasmaOrb: React.FC<ObjectProps> = ({ mouse }) => {
+  const meshRef = useRef<THREE.Mesh>(null);
 
   useFrame((state) => {
     const time = state.clock.getElapsedTime();
-    if (groupRef.current) {
-      groupRef.current.rotation.y = time * 0.3;
-      groupRef.current.rotation.x = Math.sin(time * 0.2) * 0.1;
+    if (meshRef.current) {
+      // Exact same rotation axes and speed as GreenFacetedSphere
+      meshRef.current.rotation.x = time * 0.12;
+      meshRef.current.rotation.y = time * 0.18;
 
       const targetX = mouse.current.x * 0.5;
       const targetY = mouse.current.y * 0.3;
-      groupRef.current.position.x = THREE.MathUtils.lerp(groupRef.current.position.x, targetX, 0.05);
-      groupRef.current.position.y = THREE.MathUtils.lerp(groupRef.current.position.y, targetY, 0.05);
+      meshRef.current.position.x = THREE.MathUtils.lerp(meshRef.current.position.x, targetX, 0.05);
+      meshRef.current.position.y = THREE.MathUtils.lerp(meshRef.current.position.y, targetY - 0.15, 0.05);
+
+      // Same subtle breathing scale
+      const scale = 1.0 + Math.sin(time * 1.2) * 0.05;
+      meshRef.current.scale.set(scale, scale, scale);
     }
   });
 
-  const nodes = Array.from({ length: strandCount }, (_, i) => {
-    const t = i / (strandCount - 1); // 0 to 1
-    const angle1 = t * twist;
-    const angle2 = angle1 + Math.PI;
-    const y = (t - 0.5) * height;
-
-    return {
-      a: new THREE.Vector3(Math.cos(angle1) * radius, y, Math.sin(angle1) * radius),
-      b: new THREE.Vector3(Math.cos(angle2) * radius, y, Math.sin(angle2) * radius),
-    };
-  });
-
   return (
-    <group ref={groupRef}>
-      {nodes.map(({ a, b }, i) => {
-        const mid = new THREE.Vector3().addVectors(a, b).multiplyScalar(0.5);
-        const dir = new THREE.Vector3().subVectors(b, a);
-        const len = dir.length();
-        const quat = new THREE.Quaternion().setFromUnitVectors(
-          new THREE.Vector3(0, 1, 0),
-          dir.clone().normalize()
-        );
-
-        return (
-          <group key={i}>
-            {/* Strand A node */}
-            <mesh position={a.toArray()}>
-              <sphereGeometry args={[0.07, 12, 12]} />
-              <meshStandardMaterial color="#00E5FF" metalness={0.8} roughness={0.1} />
-            </mesh>
-            {/* Strand B node */}
-            <mesh position={b.toArray()}>
-              <sphereGeometry args={[0.07, 12, 12]} />
-              <meshStandardMaterial color="#aa3bff" metalness={0.8} roughness={0.1} />
-            </mesh>
-            {/* Connecting rung */}
-            <mesh position={mid.toArray()} quaternion={quat.toArray() as [number, number, number, number]}>
-              <cylinderGeometry args={[0.012, 0.012, len, 6]} />
-              <meshBasicMaterial
-                color="#ffffff"
-                transparent
-                opacity={0.18}
-                blending={THREE.AdditiveBlending}
-              />
-            </mesh>
-          </group>
-        );
-      })}
+    <group ref={meshRef}>
+      {/* Flat-shaded violet low-poly solid */}
+      <mesh>
+        <icosahedronGeometry args={[1.2, 1]} />
+        <meshStandardMaterial
+          metalness={0.7}
+          roughness={0.25}
+          color="#7b2fff"
+          flatShading
+        />
+      </mesh>
+      {/* Matching violet glow wireframe overlay */}
+      <mesh>
+        <icosahedronGeometry args={[1.205, 1]} />
+        <meshBasicMaterial
+          color="#cc88ff"
+          wireframe
+          transparent
+          opacity={0.28}
+          blending={THREE.AdditiveBlending}
+        />
+      </mesh>
     </group>
   );
 };

@@ -40,10 +40,7 @@ export const CustomCursor: React.FC = () => {
       if (interactiveEl) {
         const text = interactiveEl.textContent || "";
         const cleanText = text.trim().replace(/\s+/g, ' ');
-        // Limit text length to prevent overflow in circle
-        const displayWord = cleanText.length > 20 ? cleanText.substring(0, 17) + "..." : cleanText;
-        
-        setHoverText(displayWord);
+        setHoverText(cleanText);
         setIsHovered(true);
         setIsNavbarHover(true);
         return;

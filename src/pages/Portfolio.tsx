@@ -82,9 +82,9 @@ export const Portfolio: React.FC = () => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search projects & tags..."
-            className="w-full bg-[#0d0d0d]/80 border border-white/10 rounded-full pl-11 pr-5 py-3 text-xs font-mono tracking-[1px] text-white placeholder-white/30 focus:outline-none focus:border-gold transition-colors duration-300"
+            className="w-full bg-[#0d0d0d]/80 border border-white/10 rounded-full pl-11 pr-5 py-3 text-xs font-mono tracking-[1px] text-white placeholder-white focus:outline-none focus:border-gold transition-colors duration-300"
           />
-          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white" />
         </div>
       </section>
 

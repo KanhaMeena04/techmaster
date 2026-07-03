@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -9,8 +9,30 @@ import { Calendar, ArrowDown } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 
 export const Journey: React.FC = () => {
+  const timelineRef = useRef<HTMLDivElement>(null);
+  const progressLineRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    // Reveal animation for timeline nodes
+    // 1. Scroll-animated progress line that grows downward as user scrolls
+    if (progressLineRef.current && timelineRef.current) {
+      gsap.fromTo(
+        progressLineRef.current,
+        { scaleY: 0 },
+        {
+          scaleY: 1,
+          ease: "none",
+          transformOrigin: "top center",
+          scrollTrigger: {
+            trigger: timelineRef.current,
+            start: "top 60%",
+            end: "bottom 80%",
+            scrub: 1.2, // Smoothly ties animation to scroll progress
+          },
+        }
+      );
+    }
+
+    // 2. Reveal animation for timeline card content
     const items = document.querySelectorAll(".timeline-item");
     items.forEach((item) => {
       gsap.fromTo(
@@ -29,6 +51,45 @@ export const Journey: React.FC = () => {
           },
         }
       );
+
+      // 3. Year highlight — glow when node enters viewport
+      const yearEl = item.querySelector(".year-label");
+      const dotEl = item.querySelector(".timeline-dot > div");
+      if (yearEl && dotEl) {
+        gsap.fromTo(
+          yearEl,
+          { color: "rgba(0,255,209,0.2)", textShadow: "none" },
+          {
+            color: "#00ffd1",
+            textShadow: "0 0 30px rgba(0,255,209,0.6), 0 0 60px rgba(0,255,209,0.3)",
+            duration: 0.6,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: item,
+              start: "top 68%",
+              toggleActions: "play none none reverse",
+            },
+          }
+        );
+
+        // Inner dot pulse + border glow on activate
+        gsap.fromTo(
+          dotEl,
+          { scale: 1, boxShadow: "0 0 0px #00ffd1", borderColor: "rgba(0,255,209,0.3)" },
+          {
+            scale: 1.35,
+            boxShadow: "0 0 20px rgba(0,255,209,0.9), 0 0 40px rgba(0,255,209,0.4)",
+            borderColor: "#00ffd1",
+            duration: 0.5,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: item,
+              start: "top 68%",
+              toggleActions: "play none none reverse",
+            },
+          }
+        );
+      }
     });
 
     return () => {
@@ -78,9 +139,20 @@ export const Journey: React.FC = () => {
       </div>
 
       {/* Timeline Section */}
-      <div className="max-w-4xl mx-auto relative z-10">
-        {/* Central connecting line */}
-        <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-[1px] bg-white/10 -translate-x-1/2" />
+      <div ref={timelineRef} className="max-w-4xl mx-auto relative z-10">
+        {/* Static background track line */}
+        <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-[1px] bg-white/8 -translate-x-1/2" />
+
+        {/* Animated progress line — grows from top to bottom on scroll */}
+        <div
+          ref={progressLineRef}
+          className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-[1px] -translate-x-1/2 origin-top"
+          style={{
+            background: "linear-gradient(to bottom, #00ffd1, #00a3ff, #aa3bff)",
+            boxShadow: "0 0 8px rgba(0,255,209,0.5)",
+            scaleY: 0,
+          }}
+        />
 
         <div className="flex flex-col gap-16 relative">
           {journeyData.map((item, index) => {
@@ -90,16 +162,24 @@ export const Journey: React.FC = () => {
                 key={index}
                 className="timeline-item flex flex-col sm:flex-row relative w-full items-start sm:justify-between"
               >
-                {/* Timeline connector circle node */}
-                <div className="absolute left-4 sm:left-1/2 w-4 h-4 rounded-full border border-gold bg-black -translate-x-1/2 top-1.5 z-20 flex items-center justify-center">
-                  <div className="w-1.5 h-1.5 rounded-full bg-gold animate-ping" />
+                {/* Timeline connector dot — precisely centered on the line */}
+                <div
+                  className="timeline-dot absolute left-4 sm:left-1/2 top-2 z-20"
+                  style={{ transform: "translate(-50%, 0)" }}
+                >
+                  <div className="w-4 h-4 rounded-full border-2 border-gold/50 bg-[#010a15] flex items-center justify-center">
+                    <div className="w-1.5 h-1.5 rounded-full bg-gold" />
+                  </div>
                 </div>
 
-                {/* Left space (empty on small, used on larger displays) */}
+                {/* Left: year on even items */}
                 <div className={`hidden sm:block w-[45%] ${isEven ? "order-1 text-right" : "order-2"}`}>
                   {isEven && (
                     <div className="timeline-reveal pr-8 pt-1">
-                      <span className="font-serif text-5xl font-black text-gold/30 block mb-1">
+                      <span
+                        className="year-label font-serif text-5xl font-black block mb-1 transition-all duration-500"
+                        style={{ color: "rgba(0,255,209,0.2)" }}
+                      >
                         {item.year}
                       </span>
                       <span className="text-white/40 text-xs uppercase tracking-[2px] font-mono">
@@ -109,11 +189,14 @@ export const Journey: React.FC = () => {
                   )}
                 </div>
 
-                {/* Right space or content card */}
+                {/* Right: content card (and year on odd items) */}
                 <div className={`w-[90%] sm:w-[45%] pl-10 sm:pl-0 ${isEven ? "order-2 sm:order-2" : "order-2 sm:order-1 text-left sm:text-right"}`}>
                   {!isEven && (
                     <div className="timeline-reveal hidden sm:block pl-8 pb-4 pt-1">
-                      <span className="font-serif text-5xl font-black text-gold/30 block mb-1">
+                      <span
+                        className="year-label font-serif text-5xl font-black block mb-1 transition-all duration-500"
+                        style={{ color: "rgba(0,255,209,0.2)" }}
+                      >
                         {item.year}
                       </span>
                       <span className="text-white/40 text-xs uppercase tracking-[2px] font-mono">
@@ -122,9 +205,12 @@ export const Journey: React.FC = () => {
                     </div>
                   )}
 
-                  {/* Timeline mobile-specific header display */}
+                  {/* Mobile year display */}
                   <div className="sm:hidden timeline-reveal mb-2">
-                    <span className="font-serif text-3xl font-black text-gold block">
+                    <span
+                      className="year-label font-serif text-3xl font-black block transition-all duration-500"
+                      style={{ color: "rgba(0,255,209,0.2)" }}
+                    >
                       {item.year}
                     </span>
                     <span className="text-white/40 text-xs uppercase tracking-[1px] font-mono">
