@@ -149,7 +149,8 @@ export const Home: React.FC<HomeProps> = ({ onChangePage }) => {
               {["NVIDIA", "GITHUB", "GOOGLE CLOUD", "APPLE DEVELOPER", "VERCEL", "MICROSOFT"].map((brand) => (
                 <span
                   key={brand}
-                  className="font-serif text-xl sm:text-2xl font-black text-white/20 tracking-[6px] hover:text-gold/50 transition-colors duration-300 select-none cursor-default"
+                  className="font-serif text-xl sm:text-2xl font-black tracking-[6px] hover:text-[#00ffd1] transition-colors duration-300 select-none cursor-default"
+                  style={{ color: "rgba(0, 255, 209, 0.45)" }}
                 >
                   {brand}
                 </span>
