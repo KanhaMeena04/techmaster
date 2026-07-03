@@ -1,0 +1,22 @@
+[
+  {
+    "id": "cult_01",
+    "title": "Autonomous Work",
+    "desc": "Complete scheduling flexibility. We focus entirely on creative output, giving you full ownership over your timeline and environment."
+  },
+  {
+    "id": "cult_02",
+    "title": "Latest Gear Stipend",
+    "desc": "Get an annual hardware budget to construct your dream workspace: custom mechanical keyboards, anamorphic lenses, or multi-GPU editing rigs."
+  },
+  {
+    "id": "cult_03",
+    "title": "Uncapped Learning",
+    "desc": "Free access to all internal bootcamps, plus a yearly allowance for coding courses, video masterclasses, books, and tech conference passes."
+  },
+  {
+    "id": "cult_04",
+    "title": "Health & Creator Labs",
+    "desc": "Global premium healthcare coverage, wellness subsidies, and direct workspace passes to state-of-the-art recording studios."
+  }
+]

@@ -5,6 +5,7 @@ export const CustomCursor: React.FC = () => {
   const cursorRef = useRef<HTMLDivElement>(null);
   const [hoverText, setHoverText] = useState("");
   const [isHovered, setIsHovered] = useState(false);
+  const [isNavbarHover, setIsNavbarHover] = useState(false);
 
   useEffect(() => {
     const cursor = cursorRef.current;
@@ -26,25 +27,43 @@ export const CustomCursor: React.FC = () => {
       
       // Check if target or any parent has data-cursor attribute
       const cursorAttrTarget = target.closest("[data-cursor]");
+      const interactiveEl = target.closest("a, button, [role='button']");
+
       if (cursorAttrTarget) {
         const text = cursorAttrTarget.getAttribute("data-cursor") || "";
         setHoverText(text);
         setIsHovered(true);
+        setIsNavbarHover(true);
         return;
       }
 
-      // Default hover on interactive elements
-      const isInteractive = target.closest("a, button, input, select, textarea, [role='button']");
-      if (isInteractive) {
+      if (interactiveEl) {
+        const text = interactiveEl.textContent || "";
+        const cleanText = text.trim().replace(/\s+/g, ' ');
+        // Limit text length to prevent overflow in circle
+        const displayWord = cleanText.length > 20 ? cleanText.substring(0, 17) + "..." : cleanText;
+        
+        setHoverText(displayWord);
+        setIsHovered(true);
+        setIsNavbarHover(true);
+        return;
+      }
+
+      // Default hover on other interactive form elements
+      const otherInteractive = target.closest("input, select, textarea");
+      if (otherInteractive) {
         setHoverText("");
         setIsHovered(true);
+        setIsNavbarHover(false);
       } else {
         setIsHovered(false);
+        setIsNavbarHover(false);
       }
     };
 
     const onMouseOut = () => {
       setIsHovered(false);
+      setIsNavbarHover(false);
     };
 
     window.addEventListener("mousemove", onMouseMove);
@@ -71,11 +90,13 @@ export const CustomCursor: React.FC = () => {
   return (
     <div
       ref={cursorRef}
-      className={`custom-cursor ${isHovered ? "hovered" : ""}`}
+      className={`custom-cursor ${isHovered ? "hovered" : ""} ${isNavbarHover ? "navbar-hover" : ""}`}
       data-text={hoverText}
       style={{
         zIndex: 9999,
-        background: isHovered && hoverText ? "#00ffd1" : isHovered ? "#00E5FF" : "white"
+        background: isNavbarHover 
+          ? undefined 
+          : (isHovered && hoverText ? "#00ffd1" : isHovered ? "#00E5FF" : "white")
       }}
     />
   );

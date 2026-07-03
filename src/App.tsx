@@ -134,7 +134,7 @@ function App() {
       {!isLoading && (
         <SmoothScroll>
           <div 
-            className="relative min-h-screen flex flex-col justify-between overflow-x-hidden selection:bg-gold selection:text-black"
+            className="relative min-h-screen flex flex-col justify-between overflow-x-clip selection:bg-gold selection:text-black"
             style={{ zIndex: 10 }}
           >
             

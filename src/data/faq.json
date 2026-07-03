@@ -1,22 +1,38 @@
 [
   {
     "id": "faq_01",
+    "category": "Courses",
     "question": "How do I enroll in the Live Mentorship Bootcamps?",
     "answer": "Enrolling is done directly through our main MasterClass platform. We host cohorts twice a year (Spring and Fall). Applications open one month prior and involve a brief technical assessment to gauge baseline understanding of full-stack principles."
   },
   {
     "id": "faq_02",
+    "category": "Speaking",
     "question": "What is Faisal's speaking availability for international keynotes?",
     "answer": "Faisal schedules international speaking engagements 3-6 months in advance. Booking options cover university guest lectures, corporate tech seminars, and major tech conferences. For scheduling, fill out the booking form on the Contact page."
   },
   {
     "id": "faq_03",
+    "category": "Courses",
     "question": "Do the online courses offer certificates or code reviews?",
     "answer": "Yes. All courses hosted on the MasterClass platform include a verified cryptographic completion certificate. Students enrolled in the premium tier also receive weekly personalized video code reviews from our network of senior engineering mentors."
   },
   {
     "id": "faq_04",
+    "category": "Sponsorships",
     "question": "How can brands collaborate on the YouTube channel?",
     "answer": "We only partner with tools and services that Faisal uses in his day-to-day coding workflows. Brand sponsorships range from dedicated video sponsorships, middleware demos, and long-term education campaign collaborations. Fill out the sponsorship request in our contact portal."
+  },
+  {
+    "id": "faq_05",
+    "category": "Careers",
+    "question": "Are there any freelance editing or design slots open?",
+    "answer": "Yes! We list all our current freelance and colorist roles in the Careers section. We are constantly seeking creative collaborators for monthly post-production sprints and educational content layouts. Feel free to apply directly via the form."
+  },
+  {
+    "id": "faq_06",
+    "category": "Speaking",
+    "question": "Can university student clubs request virtual keynotes?",
+    "answer": "Absolutely. Faisal dedicates slot availability every quarter to speak at student hackathons or developer club kickoffs. These slots are pro-bono but require scheduling alignment at least 2 months in advance via our bookings inbox."
   }
 ]

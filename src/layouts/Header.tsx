@@ -3,6 +3,8 @@ import { Menu, X, ArrowUpRight } from "lucide-react";
 import { Magnetic } from "../components/Magnetic";
 import gsap from "gsap";
 
+import logoImg from "../assets/logo.png";
+
 interface HeaderProps {
   activePage: string;
   onChangePage: (page: string) => void;
@@ -73,11 +75,15 @@ export const Header: React.FC<HeaderProps> = ({ activePage, onChangePage }) => {
           className="flex items-center gap-3 cursor-pointer group"
           data-cursor="home"
         >
-          <div className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center relative overflow-hidden transition-all duration-300 group-hover:border-gold shadow-[0_0_15px_rgba(212,175,55,0.1)]">
-            <span className="font-serif text-sm font-extrabold text-white tracking-[1px]">MF</span>
+          <div className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center relative overflow-hidden transition-all duration-300 group-hover:border-gold shadow-[0_0_15px_rgba(212,175,55,0.1)] bg-white">
+            <img 
+              src={logoImg} 
+              alt="Tech Master Logo" 
+              className="w-full h-full object-contain p-1 transition-transform duration-300 group-hover:scale-115" 
+            />
           </div>
           <span className="font-serif font-bold text-lg tracking-[2px] text-white transition-colors duration-300 group-hover:text-gold uppercase">
-            MASTER F
+            TECH MASTER
           </span>
         </div>
 
@@ -93,6 +99,7 @@ export const Header: React.FC<HeaderProps> = ({ activePage, onChangePage }) => {
             <button
               key={item.id}
               onClick={() => handleNavClick(item.id)}
+              data-cursor={item.name}
               className={`text-xs uppercase tracking-[2px] transition-all duration-300 relative py-1 hover:text-white ${
                 activePage === item.id ? "text-gold font-bold" : "text-white/60"
               }`}
@@ -111,6 +118,7 @@ export const Header: React.FC<HeaderProps> = ({ activePage, onChangePage }) => {
             <Magnetic strength={0.3}>
               <button
                 onClick={() => handleNavClick("contact")}
+                data-cursor="talk"
                 className="light-sweep px-5 py-2.5 rounded-full border border-gold/30 hover:border-gold hover:text-black hover:bg-gold transition-all duration-500 text-xs font-bold uppercase tracking-[2px] text-gold flex items-center gap-2"
               >
                 Let's Talk
@@ -151,6 +159,7 @@ export const Header: React.FC<HeaderProps> = ({ activePage, onChangePage }) => {
                 <div key={item.id} className="overflow-hidden">
                   <button
                     onClick={() => handleNavClick(item.id)}
+                    data-cursor={item.name}
                     className="menu-link block text-2xl md:text-3xl font-serif text-white hover:text-gold transition-colors duration-300 py-1 text-left relative group font-light"
                   >
                     <span className="inline-block transition-transform duration-300 group-hover:translate-x-3">
@@ -175,6 +184,7 @@ export const Header: React.FC<HeaderProps> = ({ activePage, onChangePage }) => {
                 <div key={item.id} className="overflow-hidden">
                   <button
                     onClick={() => handleNavClick(item.id)}
+                    data-cursor={item.name}
                     className="menu-link block text-2xl md:text-3xl font-serif text-white hover:text-gold transition-colors duration-300 py-1 text-left relative group font-light"
                   >
                     <span className="inline-block transition-transform duration-300 group-hover:translate-x-3">

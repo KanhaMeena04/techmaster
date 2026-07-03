@@ -2,40 +2,71 @@
   {
     "id": "job_01",
     "role": "Senior Cinematic Video Editor",
+    "type": "Full Time",
     "team": "Production",
-    "location": "Remote / Hybrid (Metropolis)",
+    "location": "Remote / Hybrid",
     "salary": "$85,000 - $110,000",
-    "description": "We are seeking a storyteller who can turn dense technical topics into cinematic experiences. You will lead editing on our YouTube channel, course trailers, and documentary releases.",
+    "description": "Seek to build stories out of dense systems concepts. You will lead editing on our YouTube channel, course trailers, and educational campaigns, shaping our cinematic brand footprint.",
     "requirements": [
-      "5+ years editing technical or luxury-tier content",
-      "Expert knowledge of After Effects, Premiere Pro, or DaVinci Resolve",
-      "Deep understanding of developer aesthetics and modern kinetic typography"
+      "5+ years editing technical or luxury-tier brand content",
+      "Expert knowledge of After Effects, Premiere Pro, and color grading workflows",
+      "Deep understanding of developer design languages and kinetic typography"
     ]
   },
   {
     "id": "job_02",
     "role": "Curriculum & Syllabus Developer",
+    "type": "Full Time",
     "team": "Education",
     "location": "Remote",
     "salary": "$90,000 - $120,000",
-    "description": "Design hands-on programming bootcamps and systems design catalogs. You'll draft curriculum blueprints, verify coding exercises, and create automated testing setups.",
+    "description": "Design interactive full-stack and systems engineering bootcamps. You'll build course schedules, sandbox workspace exercises, and curriculum blueprints for thousands of developers.",
     "requirements": [
-      "Strong background in Full Stack JS, TypeScript, and Go/Rust",
-      "Prior experience drafting engineering course materials or lecturing",
-      "Passionate about making complex systems simple and digestible"
+      "Strong background in Systems Architecture, TypeScript, and Go/Rust/Docker",
+      "Prior experience drafting developer course guides or technical teaching",
+      "Passionate about making complex, distributed concepts simple and visual"
     ]
   },
   {
     "id": "job_03",
-    "role": "Community Lead & Hackathon Coordinator",
-    "team": "Growth",
-    "location": "Metropolis Space",
-    "salary": "$60,000 - $80,000",
-    "description": "Moderate our 100k+ Discord community, coordinate student mentorship panels, and lead logistics for virtual/physical hackathons.",
+    "role": "React & WebGL Frontend Intern",
+    "type": "Internship",
+    "team": "Engineering",
+    "location": "Hybrid (Silicon Valley)",
+    "salary": "$25 - $35 / hour",
+    "description": "Collaborate directly with our engineering team to construct visual components, custom page loaders, and GLSL shaders for our platform launches and developer dashboards.",
     "requirements": [
-      "Prior experience managing Discord/Slack developer communities",
-      "Excellent communication and event-planning skills",
-      "Empathetic mindset focused on assisting beginners and career switchers"
+      "Proficient in React, TypeScript, Tailwind CSS, and Framer Motion",
+      "Familiarity with Three.js / WebGL / React Three Fiber is a huge plus",
+      "Strong aesthetic sensibility and eye for micro-animations"
+    ]
+  },
+  {
+    "id": "job_04",
+    "role": "Content Production Intern",
+    "type": "Internship",
+    "team": "Production",
+    "location": "Remote",
+    "salary": "$20 - $28 / hour",
+    "description": "Research computer science topics, assist with scripting cinematic YouTube episodes, and manage asset organizations for high-quality video content production.",
+    "requirements": [
+      "Active background or study in Computer Science or Film Production",
+      "Highly organized and proactive research capability",
+      "Strong writing skills with the ability to summarize complex technology clearly"
+    ]
+  },
+  {
+    "id": "job_05",
+    "role": "Freelance Colorist & Video Editor",
+    "type": "Freelance",
+    "team": "Production",
+    "location": "Remote",
+    "salary": "Project-based rates",
+    "description": "Provide grading, sound design, and custom styling for short-form developer tutorials, reels, and commercial partnership promos on a rolling monthly contract.",
+    "requirements": [
+      "Exceptional grading reel showcasing low-light cybernetic aesthetics",
+      "Mastery of DaVinci Resolve Studio color management",
+      "Fast turnaround times for high-volume video deliverables"
     ]
   }
 ]

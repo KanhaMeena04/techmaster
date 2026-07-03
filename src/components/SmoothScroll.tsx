@@ -29,20 +29,20 @@ export const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
       ScrollTrigger.update();
     });
 
-    // Sync Lenis RAF with GSAP Ticker
-    const gsapTicker = (time: number) => {
-      lenis.raf(time * 1000);
+    // Sync Lenis RAF
+    let rafId: number;
+    const raf = (time: number) => {
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
     };
-
-    gsap.ticker.add(gsapTicker);
-    gsap.ticker.lagSmoothing(0);
+    rafId = requestAnimationFrame(raf);
 
     // Provide global access to lenis if needed
     (window as any).lenis = lenis;
 
     return () => {
       lenis.destroy();
-      gsap.ticker.remove(gsapTicker);
+      cancelAnimationFrame(rafId);
     };
   }, []);
 

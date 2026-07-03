@@ -42,9 +42,9 @@ export const About: React.FC = () => {
           <p className="text-white/80 font-light text-base md:text-lg leading-relaxed">
             {aboutData.bio}
           </p>
-          <div className="flex flex-col gap-4">
+          <div className="glass-panel p-8 rounded-3xl border border-white/5 hover:border-gold/30 transition-all duration-300 flex flex-col gap-4">
             <span className="text-xs uppercase font-bold tracking-[2px] text-gold">{aboutData.philosophy.title}</span>
-            <p className="text-white/50 font-light leading-relaxed">
+            <p className="text-white/70 font-light leading-relaxed text-sm">
               {aboutData.philosophy.paragraph}
             </p>
           </div>

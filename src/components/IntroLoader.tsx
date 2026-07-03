@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import gsap from "gsap";
+import logoImg from "../assets/logo.png";
 
 interface IntroLoaderProps {
   onComplete: () => void;
@@ -64,10 +65,12 @@ export const IntroLoader: React.FC<IntroLoaderProps> = ({ onComplete }) => {
       {/* Center elements - Logo */}
       <div className="flex flex-col items-center justify-center flex-grow z-10">
         <div className="loader-logo relative flex flex-col items-center">
-          <div className="w-24 h-24 rounded-full border border-gold/20 flex items-center justify-center relative overflow-hidden shadow-[0_0_50px_rgba(212,175,55,0.15)]">
-            {/* Golden sweep orb */}
-            <div className="absolute w-full h-full bg-gradient-to-tr from-gold to-royal-purple opacity-30 animate-spin" style={{ animationDuration: "6s" }} />
-            <span className="font-serif text-3xl font-extrabold text-white tracking-[2px] z-10 relative">TM</span>
+          <div className="w-24 h-24 rounded-full border border-gold/20 flex items-center justify-center relative overflow-hidden shadow-[0_0_50px_rgba(212,175,55,0.15)] bg-white">
+            <img 
+              src={logoImg} 
+              alt="Tech Master Logo" 
+              className="w-full h-full object-contain p-2" 
+            />
           </div>
           <div className="mt-6 text-xs uppercase tracking-[8px] text-white/90">INNOVATION ARCHITECTURE</div>
         </div>

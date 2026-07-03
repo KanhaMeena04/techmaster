@@ -254,7 +254,7 @@ export const Footer: React.FC<FooterProps> = ({ onChangePage }) => {
               type="email"
               required
               placeholder="ENTER YOUR DIRECT EMAIL"
-              className="w-full bg-[#0d0d0d]/80 border border-white/10 rounded-full px-6 py-4 text-xs font-mono tracking-[2px] uppercase text-white placeholder-white/30 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-all duration-300 pr-16 backdrop-blur-md"
+              className="w-full bg-[#0d0d0d]/80 border border-white/10 rounded-full px-6 py-4 text-xs font-mono tracking-[2px] uppercase text-white placeholder-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-all duration-300 pr-16 backdrop-blur-md"
             />
             <button
               type="submit"
@@ -280,6 +280,7 @@ export const Footer: React.FC<FooterProps> = ({ onChangePage }) => {
                 { name: "What We Do", id: "what-we-do" },
                 { name: "Core Services", id: "services" },
                 { name: "Brand Collabs", id: "collaborations" },
+                { name: "Careers", id: "career" },
               ].map((link) => (
                 <li key={link.id}>
                   <button
@@ -301,9 +302,10 @@ export const Footer: React.FC<FooterProps> = ({ onChangePage }) => {
                 { name: "Campaigns", id: "campaigns" },
                 { name: "Product Launches", id: "product-launches" },
                 { name: "Events & Talks", id: "events" },
-                { name: "Student Work", id: "portfolio" },
+                { name: "Portfolio", id: "portfolio" },
                 { name: "Media Gallery", id: "gallery" },
                 { name: "Testimonials", id: "testimonials" },
+                { name: "FAQ", id: "faq" },
               ].map((link) => (
                 <li key={link.id}>
                   <button
@@ -366,10 +368,10 @@ export const Footer: React.FC<FooterProps> = ({ onChangePage }) => {
       {/* Footer Bottom copyright and social handles */}
       <div className="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 relative z-10">
         <div className="text-left">
-          <p className="text-[10px] uppercase tracking-[2px] text-white/30 font-light">
+          <p className="text-[10px] uppercase tracking-[2px] text-white font-light">
             &copy; {new Date().getFullYear()} MASTER F MEDIA & CREATIVE LABS. ALL RIGHTS RESERVED.
           </p>
-          <p className="text-[9px] uppercase tracking-[1px] text-white/20 mt-1">
+          <p className="text-[9px] uppercase tracking-[1px] text-white mt-1">
             Premium Creator Blueprint &bull; Designed to Awwwards Site of the Day Standard
           </p>
         </div>

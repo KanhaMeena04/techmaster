@@ -21,7 +21,7 @@
   color-scheme: dark;
   background-color: #010a15;
   color: #e5e5e5;
-  overflow-x: hidden;
+  overflow-x: clip;
   font-family: var(--font-sans);
 }
 
@@ -59,6 +59,21 @@ body {
   font-weight: 700;
   letter-spacing: 2px;
   color: black;
+  text-align: center;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.custom-cursor.navbar-hover {
+  background: rgba(1, 10, 21, 0.85) !important;
+  border: 2px solid #00E5FF;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+}
+
+.custom-cursor.navbar-hover.hovered {
+  color: #00E5FF !important;
+  font-weight: 800;
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.5);
 }
 
 .custom-cursor.hovered::after {
@@ -188,4 +203,25 @@ html.lenis, html.lenis body {
   a, button, [role="button"], input, select, textarea {
     cursor: none !important;
   }
+}
+
+/* Lenis Smooth Scroll Core Styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
