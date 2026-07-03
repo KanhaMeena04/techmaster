@@ -9,8 +9,8 @@ import servicesData from "../data/services.json";
 import { 
   BlueMorphingOrb, 
   GreenFacetedSphere, 
-  OrangeTorusKnot, 
-  RedSpikyCrystal 
+  DNAHelixObject, 
+  GeodesicShield 
 } from "../three/ShowcaseObjects";
 
 export const Services: React.FC = () => {
@@ -128,8 +128,8 @@ export const Services: React.FC = () => {
                 <group>
                   {activeIndex === 0 && <BlueMorphingOrb mouse={mouse} />}
                   {activeIndex === 1 && <GreenFacetedSphere mouse={mouse} />}
-                  {activeIndex === 2 && <OrangeTorusKnot mouse={mouse} />}
-                  {activeIndex === 3 && <RedSpikyCrystal mouse={mouse} />}
+                  {activeIndex === 2 && <DNAHelixObject mouse={mouse} />}
+                  {activeIndex === 3 && <GeodesicShield mouse={mouse} />}
                 </group>
               </Canvas>
             </div>

@@ -155,135 +155,159 @@ export const GreenFacetedSphere: React.FC<ObjectProps> = ({ mouse }) => {
   );
 };
 
-// Shape 3: Copper Twisted Torus Knot
-export const OrangeTorusKnot: React.FC<ObjectProps> = ({ mouse }) => {
-  const meshRef = useRef<THREE.Mesh>(null);
+// Shape 3: Holographic DNA Double Helix — Premium orbital strand structure
+export const DNAHelixObject: React.FC<ObjectProps> = ({ mouse }) => {
+  const groupRef = useRef<THREE.Group>(null);
+
+  const strandCount = 28;
+  const radius = 0.75;
+  const height = 3.2;
+  const twist = Math.PI * 3;
 
   useFrame((state) => {
     const time = state.clock.getElapsedTime();
-    if (meshRef.current) {
-      meshRef.current.rotation.x = time * 0.25;
-      meshRef.current.rotation.y = time * 0.3;
-      
+    if (groupRef.current) {
+      groupRef.current.rotation.y = time * 0.3;
+      groupRef.current.rotation.x = Math.sin(time * 0.2) * 0.1;
+
       const targetX = mouse.current.x * 0.5;
       const targetY = mouse.current.y * 0.3;
-      meshRef.current.position.x = THREE.MathUtils.lerp(meshRef.current.position.x, targetX, 0.05);
-      meshRef.current.position.y = THREE.MathUtils.lerp(meshRef.current.position.y, targetY - 0.15, 0.05);
-
-      const scale = 1.0 + Math.cos(time * 1.5) * 0.05;
-      meshRef.current.scale.set(scale, scale, scale);
+      groupRef.current.position.x = THREE.MathUtils.lerp(groupRef.current.position.x, targetX, 0.05);
+      groupRef.current.position.y = THREE.MathUtils.lerp(groupRef.current.position.y, targetY, 0.05);
     }
   });
 
+  const nodes = Array.from({ length: strandCount }, (_, i) => {
+    const t = i / (strandCount - 1); // 0 to 1
+    const angle1 = t * twist;
+    const angle2 = angle1 + Math.PI;
+    const y = (t - 0.5) * height;
+
+    return {
+      a: new THREE.Vector3(Math.cos(angle1) * radius, y, Math.sin(angle1) * radius),
+      b: new THREE.Vector3(Math.cos(angle2) * radius, y, Math.sin(angle2) * radius),
+    };
+  });
+
   return (
-    <group ref={meshRef}>
-      <mesh castShadow receiveShadow>
-        <torusKnotGeometry args={[0.85, 0.28, 96, 12, 2, 3]} />
-        <meshStandardMaterial
-          metalness={0.95}
-          roughness={0.14}
-          color="#ff5500" // Neon orange / copper
-          envMapIntensity={2.0}
-        />
-      </mesh>
-      {/* Light wireframe highlights */}
-      <mesh>
-        <torusKnotGeometry args={[0.855, 0.282, 96, 12, 2, 3]} />
-        <meshBasicMaterial
-          color="#ffaa00"
-          wireframe
-          transparent
-          opacity={0.15}
-          blending={THREE.AdditiveBlending}
-        />
-      </mesh>
+    <group ref={groupRef}>
+      {nodes.map(({ a, b }, i) => {
+        const mid = new THREE.Vector3().addVectors(a, b).multiplyScalar(0.5);
+        const dir = new THREE.Vector3().subVectors(b, a);
+        const len = dir.length();
+        const quat = new THREE.Quaternion().setFromUnitVectors(
+          new THREE.Vector3(0, 1, 0),
+          dir.clone().normalize()
+        );
+
+        return (
+          <group key={i}>
+            {/* Strand A node */}
+            <mesh position={a.toArray()}>
+              <sphereGeometry args={[0.07, 12, 12]} />
+              <meshStandardMaterial color="#00E5FF" metalness={0.8} roughness={0.1} />
+            </mesh>
+            {/* Strand B node */}
+            <mesh position={b.toArray()}>
+              <sphereGeometry args={[0.07, 12, 12]} />
+              <meshStandardMaterial color="#aa3bff" metalness={0.8} roughness={0.1} />
+            </mesh>
+            {/* Connecting rung */}
+            <mesh position={mid.toArray()} quaternion={quat.toArray() as [number, number, number, number]}>
+              <cylinderGeometry args={[0.012, 0.012, len, 6]} />
+              <meshBasicMaterial
+                color="#ffffff"
+                transparent
+                opacity={0.18}
+                blending={THREE.AdditiveBlending}
+              />
+            </mesh>
+          </group>
+        );
+      })}
     </group>
   );
 };
 
-// Shape 4: Red Spiky Starburst Crystal
-export const RedSpikyCrystal: React.FC<ObjectProps> = ({ mouse }) => {
-  const meshRef = useRef<THREE.Mesh>(null);
-  const geomRef = useRef<THREE.IcosahedronGeometry>(null);
-  const wireGeomRef = useRef<THREE.IcosahedronGeometry>(null);
-  const originalPositions = useRef<Float32Array | null>(null);
+// Shape 4: Multi-layer Geodesic Orbital Shield
+export const GeodesicShield: React.FC<ObjectProps> = ({ mouse }) => {
+  const outerRef = useRef<THREE.Mesh>(null);
+  const midRef   = useRef<THREE.Mesh>(null);
+  const innerRef = useRef<THREE.Mesh>(null);
+  const coreRef  = useRef<THREE.Mesh>(null);
 
   useFrame((state) => {
     const time = state.clock.getElapsedTime();
-    
-    if (meshRef.current) {
-      meshRef.current.rotation.y = time * 0.2;
-      
+
+    if (outerRef.current) {
+      outerRef.current.rotation.x = time * 0.12;
+      outerRef.current.rotation.y = time * 0.18;
       const targetX = mouse.current.x * 0.5;
       const targetY = mouse.current.y * 0.3;
-      meshRef.current.position.x = THREE.MathUtils.lerp(meshRef.current.position.x, targetX, 0.05);
-      meshRef.current.position.y = THREE.MathUtils.lerp(meshRef.current.position.y, targetY - 0.15, 0.05);
+      outerRef.current.position.x = THREE.MathUtils.lerp(outerRef.current.position.x, targetX, 0.04);
+      outerRef.current.position.y = THREE.MathUtils.lerp(outerRef.current.position.y, targetY, 0.04);
     }
-
-    if (geomRef.current) {
-      const posAttr = geomRef.current.attributes.position;
-      if (!originalPositions.current) {
-        originalPositions.current = posAttr.array.slice() as Float32Array;
-      }
-
-      const orig = originalPositions.current;
-      for (let i = 0; i < posAttr.count; i++) {
-        const x = orig[i * 3];
-        const y = orig[i * 3 + 1];
-        const z = orig[i * 3 + 2];
-
-        const length = Math.sqrt(x*x + y*y + z*z);
-        const nx = x / length;
-        const ny = y / length;
-        const nz = z / length;
-
-        // High frequency starburst spikes
-        const spike = Math.sin(nx * 14 + time * 3.5) * Math.cos(ny * 14 + time * 3.5) * Math.sin(nz * 14 + time * 3.5);
-        const offset = spike > 0 ? spike * 0.55 : spike * 0.15;
-        const newLength = length + offset;
-
-        posAttr.setXYZ(i, nx * newLength, ny * newLength, nz * newLength);
-      }
-      posAttr.needsUpdate = true;
-      geomRef.current.computeVertexNormals();
-
-      // Mirror positions to wireframe
-      if (wireGeomRef.current) {
-        const wirePosAttr = wireGeomRef.current.attributes.position;
-        for (let i = 0; i < posAttr.count; i++) {
-          wirePosAttr.setXYZ(
-            i, 
-            posAttr.getX(i) * 1.005, 
-            posAttr.getY(i) * 1.005, 
-            posAttr.getZ(i) * 1.005
-          );
-        }
-        wirePosAttr.needsUpdate = true;
-        wireGeomRef.current.computeVertexNormals();
-      }
+    if (midRef.current) {
+      midRef.current.rotation.x = -time * 0.22;
+      midRef.current.rotation.z = time * 0.14;
+    }
+    if (innerRef.current) {
+      innerRef.current.rotation.y = time * 0.35;
+      innerRef.current.rotation.z = -time * 0.2;
+    }
+    if (coreRef.current) {
+      // Pulsing glowing core
+      const pulse = 1.0 + Math.sin(time * 2.5) * 0.12;
+      coreRef.current.scale.setScalar(pulse);
     }
   });
 
   return (
-    <group ref={meshRef}>
-      <mesh castShadow receiveShadow>
-        <icosahedronGeometry ref={geomRef} args={[1.1, 2]} />
+    <group>
+      {/* Outer geodesic wireframe shell */}
+      <mesh ref={outerRef}>
+        <icosahedronGeometry args={[1.55, 1]} />
+        <meshBasicMaterial
+          color="#00E5FF"
+          wireframe
+          transparent
+          opacity={0.22}
+          blending={THREE.AdditiveBlending}
+        />
+      </mesh>
+
+      {/* Middle solid faceted layer */}
+      <mesh ref={midRef}>
+        <icosahedronGeometry args={[1.18, 1]} />
         <meshStandardMaterial
-          metalness={0.8}
-          roughness={0.12}
-          color="#ff0044" // Deep bright red / crimson
+          metalness={0.7}
+          roughness={0.2}
+          color="#0a2a5e"
           flatShading
         />
       </mesh>
-      {/* Wireframe crystal wrap */}
-      <mesh>
-        <icosahedronGeometry ref={wireGeomRef} args={[1.1, 2]} />
+
+      {/* Inner wireframe ring */}
+      <mesh ref={innerRef}>
+        <icosahedronGeometry args={[0.85, 0]} />
         <meshBasicMaterial
-          color="#ff8888"
+          color="#aa3bff"
           wireframe
           transparent
-          opacity={0.25}
+          opacity={0.6}
           blending={THREE.AdditiveBlending}
+        />
+      </mesh>
+
+      {/* Glowing energy core */}
+      <mesh ref={coreRef}>
+        <sphereGeometry args={[0.32, 32, 32]} />
+        <meshStandardMaterial
+          color="#00ffd1"
+          emissive="#00ffd1"
+          emissiveIntensity={2.5}
+          roughness={0}
+          metalness={0}
         />
       </mesh>
     </group>
